@@ -1,0 +1,31 @@
+@mixin cardPosition($t, $r, $b, $l) {
+  position: absolute;
+  clip: rect($t, $r, $b, $l);
+  left: -$l;
+  top: -$t;
+}
+
+// #date_view{
+//     background-image: url('/public/img/background.jpeg');
+// }
+
+button{
+  border: none;
+}
+
+#card_img {
+  position: relative;
+  width: 182px;
+  height: 252px;
+  margin: 20px auto;
+  overflow: hidden;
+  #mau {
+    @include cardPosition(537px, 1000px, 789px, 819px);
+  }
+  #xi_co {
+    @include cardPosition(0, 182px, 252px, 0);
+  }
+  #heo_co {
+    @include cardPosition(0, 386px, 252px, 204px);
+  }
+}
